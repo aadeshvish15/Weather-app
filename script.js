@@ -96,7 +96,7 @@ const getWeatherDetails = async (API_URL) => {
 
 //Weather display by search
 const setWeatherRequest = (cityName) => {
-    const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=2`;
+    const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=2`;
     getWeatherDetails(API_URL);
 }
 
@@ -105,7 +105,7 @@ const setWeatherRequest = (cityName) => {
 locationBtn.addEventListener("click", () => {
     navigator.geolocation.getCurrentPosition((position) => {
         const { latitude, longitude } = position.coords;
-        const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude}&q=${longitude}&days=2`;        
+        const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude}&q=${longitude}&days=2`;        
         getWeatherDetails(API_URL);
     }, (error) => {
         alert("Location access denied. Please enable permissions  to use this feature");
