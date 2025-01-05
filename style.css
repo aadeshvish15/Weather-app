@@ -1,0 +1,247 @@
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+
+html,body{
+height:100%;
+width:100%;
+}
+
+body{
+    background-color: #5f41e4;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: white;
+    max-width: 400px;
+    display: flex;
+    min-height: 400px;
+    width: 350px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.input-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 54px;
+     /* background-color: red; */
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.input-display{
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    /* background-color: goldenrod; */
+    width: 250px;
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid gray;
+    overflow: hidden;
+}
+
+.input-display:hover{
+    border: 3px solid #5f41e4;
+}
+
+.input {
+    height:50px;
+    outline: none;
+    border: none;
+    width: 200px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-right: 10px;
+}
+
+.input-display i{
+    width: 40px;
+    text-align: center;
+}
+
+.location{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.location:hover{
+    border: 2.5px solid #5f41e4;
+}
+
+.weather-display{
+    margin-top: 20px;
+    /* background-color: goldenrod; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.CityName{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.current-weather{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-weather img{
+    margin-top: 5px;
+    font-size: larger;
+}
+
+.others-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: red; */
+    width: 100%;
+    height: 100px;
+}
+
+.humidity-info p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.windspeed-info p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.humidity{
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 5px;
+}
+
+.windspeed{
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 5px;
+}
+
+.humidity img {
+    width: 50px;    
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.windspeed img{
+    width: 50px;    
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hourly-display{
+    height: 120px;
+    width: 100%;
+    border-top: 2px solid #d5ccff;
+    padding-top: 10px;
+    /* background-color: red; */
+}
+
+.weather-list{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    gap: 22px;
+    padding-left:8px;
+    padding-right:8px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.hourly-display:hover .weather-list{
+    scrollbar-color: #bfbfbf transparent;
+}
+
+.weather-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+
+.weather-icon{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.weather-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+body.show-no-results .weather-section{
+    visibility: hidden;
+}
+
+.no-results{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body.show-no-results .no-results{
+    display: flex;
+}
+
+.no-results .title{
+    margin: 25px 0 15px;
+}
+
+.no-results .message{
+    font-weight: 500;
+}
+
