@@ -11,7 +11,7 @@ const WeatherSection= document.querySelector(".weather-section");
 const noResults = document.querySelector(".no-results");
 const inputInfo = document.querySelector(".input-info");
 
-const API_KEY = "d897e02a29974f5796b84752240112"
+const API_KEY = "29c8933c25784bd48fb155001250501"
 
 
 //Handling User Input
